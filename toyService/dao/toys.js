@@ -1,9 +1,11 @@
 const { Console, log } = require('console');
+const path= require('path');
+const rootPath= path.resolve(__dirname, '../../');
+const filepath=path.join(rootPath, 'resources/Toysjson.json');
 const fs = require('fs');
 
 let read_json_file = () =>{
-    let file = "./resources/Toysjson.json";
-    return fs.readFileSync(file);
+    return fs.readFileSync(filepath);
 }
 
 exports.list = () =>{
@@ -24,7 +26,8 @@ exports.query_by_arg = (value) =>{
         }else if(value === "Durham"){
             results[i].prize *= 1.08;
         }
-        //results[i].price = results[i].price.toFixed(2); 
+
+        results[i].prize = results[i].prize.toFixed(2); 
     }
     return results;
 }
