@@ -1,7 +1,8 @@
+const { Console, log } = require('console');
 const fs = require('fs');
 
 let read_json_file = () =>{
-    let file = "../resources/Toysjson.json";
+    let file = "./resources/Toysjson.json";
     return fs.readFileSync(file);
 }
 
@@ -15,14 +16,15 @@ exports.query_by_arg = (value) =>{
     }
     let results = JSON.parse(read_json_file());
     console.log("Query by location" + value);
+    console.log(results);
     for(let i =0; i < results.length; i++){
-        let product = results[i];
+        console.log(results[i].price);
         if(value === "Raleigh"){
-            product.price *= 1.075;
+            results[i].prize *= 1.075;
         }else if(value === "Durham"){
-            product.price *= 1.08;
+            results[i].prize *= 1.08;
         }
-        product.price = product.price.toFixed(2);
+        //results[i].price = results[i].price.toFixed(2); 
     }
     return results;
 }
