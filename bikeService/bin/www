@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var app = require("D:/Associate/FidZulu/bikeService/index.js");
+var app = require("../index.js");
 var debug = require('debug')('foodService:server');
 var http = require('http');
 
