@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var createError = require('http-errors');
-const bikes = require('../dao/bike');
+const bikes = require('../dao/dvd');
 // const team = require('../modules/team');
 
 // router.get('/team', function(req, res, next) {
@@ -18,9 +18,9 @@ const bikes = require('../dao/bike');
 
 router.get('/:location', function(req, res, next) {
   const param = req.params.location;
-  console.log('got into bikes/:location ' + param);
+  console.log('got into dvd/:location ' + param);
 
-  const result = bikes.query_by_arg(
+  const result = dvd.query_by_arg(
     param);
   if (result) {
     res.setHeader('content-type', 'application/json');

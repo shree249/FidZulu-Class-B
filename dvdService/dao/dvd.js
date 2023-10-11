@@ -49,7 +49,7 @@ exports.query_by_arg = (value) =>{
 
 exports.reset_json = (content) => {
     const data = JSON.stringify(content);
-        fs.writeFile("../Resources/Toysjson.json", data, err=>{
+        fs.writeFile("../Resources/Dvdjson.json", data, err=>{
             if(err){
                 console.log("Error writing file" ,err)
             } else {
