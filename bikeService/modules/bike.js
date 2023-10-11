@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 let read_json_file = () =>{
-    let file = "../resources/Bikejson.json";
+    let file = "./resources/Bikejson.json";
     return fs.readFileSync(file);
 }
 

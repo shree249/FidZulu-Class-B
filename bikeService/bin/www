@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var app = require("../index");
+var app = require("../index.js");
 var debug = require('debug')('foodService:server');
 var http = require('http');
 
