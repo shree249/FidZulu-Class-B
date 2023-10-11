@@ -1,8 +1,10 @@
+const path= require('path');
+const rootPath= path.resolve(__dirname, '../../');
+const filepath=path.join(rootPath, 'resources/Bikejson.json');
 const fs = require('fs');
 
 let read_json_file = () =>{
-    let file = "./resources/Bikejson.json";
-    return fs.readFileSync(file);
+    return fs.readFileSync(filepath);
 }
 
 exports.list = () =>{

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var createError = require('http-errors');
-const bikes = require('../modules/bike');
+const bikes = require('../dao/bike');
 // const team = require('../modules/team');
 
 // router.get('/team', function(req, res, next) {

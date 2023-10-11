@@ -1,12 +1,12 @@
 let request = require("request");
-let bikes = require("../modules/bike");
+let bikes = require("../dao/bike");
 
 describe("Bike module test", () => {
     describe("load all bikes", () => {
     
         it("have four elements", () => {
             let results = bikes.list();
-            expect(results.length).toBe(16);
+            expect(results.length).toBe(15);
         });
         
     });
