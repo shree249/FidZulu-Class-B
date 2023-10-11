@@ -1,6 +1,6 @@
 const path= require('path');
 const rootPath= path.resolve(__dirname, '../../');
-const filepath=path.join(rootPath, 'resources/Bikejson.json');
+const filepath=path.join(rootPath, 'resources/Dvdjson.json');
 const fs = require('fs');
 
 let read_json_file = () =>{
