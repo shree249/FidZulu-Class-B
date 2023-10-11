@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 var app = require('../index');
-var debug = require('debug')('foodService:server');
+var debug = require('debug')('bookService:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
-var port = normalizePort(process.env.PORT || '3032'); // Change '3000' to your desired port number
+var port = normalizePort(process.env.PORT || '3034'); // Change '3000' to your desired port number
 app.set('port', port);
 
 /**
